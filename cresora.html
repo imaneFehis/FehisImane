@@ -8,14 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
 <nav class="pillnav" aria-label="Main">
   <a class="home" href="index.html"><span class="dot" aria-hidden="true"></span><span class="name">Imane</span></a>
   <span class="sep" aria-hidden="true"></span>
-  <a href="work.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg><span class="label">All work</span></a>
+  <a href="work.html">Work</a>
+  <a class="hide-sm" href="index.html#about">About</a>
+  <a class="hide-sm" href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
   <button type="button" id="themeToggle" aria-label="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
   <a class="cta" href="index.html#contact">Let's talk</a>
 </nav>
@@ -30,6 +32,8 @@
       <a class="btn primary" href="https://cresoracommerce.com/Home">Visit cresoracommerce.com ↗</a>
     </div>
   </header>
+
+  <div class="band cover-band"><img src="cover-cresora.jpg" alt="Cresora Commerce landing page in a browser window"></div>
 
   <div class="band meta">
     <div><span class="mono">Role</span><b>Product Designer, end to end</b></div>
@@ -60,7 +64,7 @@
     <div class="content">
       <section class="chapter" id="overview" data-track="" data-n="01" data-title="Overview">
         <span class="label mono">01 · Overview</span>
-        <h2 data-scramble="">The short version</h2>
+        <h2>The short version</h2>
         <div class="tldr" style="border: 1px solid var(--line); border-radius: 18px; overflow: hidden;">
           <div><span class="mono">Problem</span><p>Software partners had to get through onboarding, compliance, certification and review before taking a single payment, and it was easy to get lost on the way.</p></div>
           <div><span class="mono">What I did</span><p>Designed the full MVP: a stage-aware partner portal, an internal admin portal for six review teams, and one UI kit shared by both.</p></div>
@@ -74,7 +78,7 @@
 
       <section class="chapter" id="problem" data-track="" data-n="02" data-title="The problem">
         <span class="label mono">02 · The problem</span>
-        <h2 data-scramble="">A long, regulated road to the first payment</h2>
+        <h2>A long, regulated road to the first payment</h2>
         <div class="prose">
           <p>Cresora is payments infrastructure for healthcare and other regulated industries. Software companies (ISV partners) connect Cresora to their products so their clients, such as dental clinics, physical therapy practices and urgent care centers, can take payments.</p>
           <p>Before that first payment, a partner has to integrate and test, sign a HIPAA Business Associate Agreement, complete a PCI questionnaire, pass certification in three tiers and get each merchant approved. Cresora's own teams review every step.</p>
@@ -84,7 +88,7 @@
 
       <section class="chapter" id="constraints" data-track="" data-n="03" data-title="Constraints">
         <span class="label mono">03 · Constraints</span>
-        <h2 data-scramble="">What shaped the design</h2>
+        <h2>What shaped the design</h2>
         <div class="constraints">
           <div><span class="mono muted">Regulation</span><h4>HIPAA and PCI</h4><p>Compliance documents have real statuses and expiry dates, and every action on money or health data needs to be traceable.</p></div>
           <div><span class="mono muted">Users</span><h4>10+ roles</h4><p>Four partner roles with different permissions, and six internal teams that each own a different review step.</p></div>
@@ -94,7 +98,7 @@
 
       <section class="chapter" id="users" data-track="" data-n="04" data-title="Users">
         <span class="label mono">04 · Users</span>
-        <h2 data-scramble="">Two sides, many jobs</h2>
+        <h2>Two sides, many jobs</h2>
         <div class="figs-2">
           <div class="card">
             <span class="mono" style="color: var(--accent-text);">Partner side</span>
@@ -109,17 +113,11 @@
             <p class="muted">Admin, Risk Ops, Underwriting, Pre-underwriting, Compliance and Support. Each one reviews, approves or monitors a different part of the partner and merchant journey.</p>
           </div>
         </div>
-        <h3>What the requirements told me</h3>
-        <div class="insights">
-          <div class="insight"><span class="mono">01</span><span class="heard">Partners couldn't tell what was left before go-live, or whether the next move was theirs or Cresora's.</span><span class="so">A stage-aware dashboard and a checklist that labels every step "You" or "Cresora"</span></div>
-          <div class="insight"><span class="mono">02</span><span class="heard">Six internal teams each own a different review step, and every decision on money or health data has to be traceable.</span><span class="so">Review queues per team, required reasons for overrides, and a full audit log</span></div>
-          <div class="insight"><span class="mono">03</span><span class="heard">Payments fail in many ways: declines, voids, refunds, ACH returns and chargebacks.</span><span class="so">The whole transaction lifecycle designed, with a confirmation on every irreversible action</span></div>
-        </div>
       </section>
 
       <section class="chapter" id="decisions" data-track="" data-n="05" data-title="Key decisions">
         <span class="label mono">05 · Key decisions</span>
-        <h2 data-scramble="">Three calls that defined the product</h2>
+        <h2>Three calls that defined the product</h2>
 
         <article class="decision-card">
           <header><span class="mono">Decision 01</span><h3>Always show where you are and what blocks you</h3></header>
@@ -163,7 +161,7 @@
 
       <section class="chapter" id="states" data-track="" data-n="06" data-title="Every state">
         <span class="label mono">06 · Every state</span>
-        <h2 data-scramble="">Designing beyond the happy path</h2>
+        <h2>Designing beyond the happy path</h2>
         <div class="prose"><p>Failures, blocks, rejections, expirations and suspensions each got a clear message and a next step. Try the gate below, then scan the states I designed.</p></div>
 
         <div class="figure">
@@ -194,29 +192,12 @@
           <div class="state"><span class="chip warn">API error</span><p>Integration health with uptime, latency and error rate.</p></div>
         </div>
 
-        <h3>HIPAA agreement lifecycle</h3>
-        <div class="states">
-          <div class="state"><span class="chip idle">Not started</span></div>
-          <div class="state"><span class="chip warn">Awaiting partner signature</span></div>
-          <div class="state"><span class="chip review">Awaiting counter-signature</span></div>
-          <div class="state"><span class="chip ok">Executed</span></div>
-          <div class="state"><span class="chip block">Expired</span></div>
-        </div>
-
-        <h3>Secure sign-in</h3>
-        <div class="states">
-          <div class="state"><span class="chip block">Invalid credentials</span></div>
-          <div class="state"><span class="chip review">MFA required</span></div>
-          <div class="state"><span class="chip warn">Suspicious login</span></div>
-          <div class="state"><span class="chip block">Locked account</span></div>
-        </div>
-
         <h3>Errors caught where they happen</h3>
       </section>
 
       <section class="chapter" id="outcome" data-track="" data-n="07" data-title="Outcome">
         <span class="label mono">07 · Outcome</span>
-        <h2 data-scramble="">What happened next</h2>
+        <h2>What happened next</h2>
         <div class="outcomes">
           <div class="outcome"><span class="mono muted">Launch</span><b>Apr 2026</b><p>Cresora Commerce officially launched, <a href="https://natlawreview.com/press-releases/cresora-commerce-launches-over-4m-funding-redefine-ai-driven-commerce">backed by over $4M in initial funding ↗</a>.</p></div>
           <div class="outcome"><span class="mono muted">Scope</span><b>10+ roles</b><p>Designed for, across a partner portal and an internal admin portal.</p></div>
@@ -234,6 +215,6 @@
   </section>
 </main>
 
-<script src="main.js?v=4"></script>
+<script src="main.js?v=7"></script>
 </body>
 </html>

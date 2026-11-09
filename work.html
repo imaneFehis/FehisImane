@@ -8,16 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
 <nav class="pillnav" aria-label="Main">
   <a class="home" href="index.html"><span class="dot" aria-hidden="true"></span><span class="name">Imane</span></a>
   <span class="sep" aria-hidden="true"></span>
-  <a href="work.html" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg><span class="label">Work</span></a>
-  <a href="index.html#about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span class="label">About</span></a>
-  <a href="resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path></svg><span class="label">Résumé</span></a>
+  <a href="work.html" class="active" aria-current="page">Work</a>
+  <a class="hide-sm" href="index.html#about">About</a>
+  <a class="hide-sm" href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
   <button type="button" id="themeToggle" aria-label="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
   <a class="cta" href="index.html#contact">Let's talk</a>
 </nav>
@@ -26,10 +26,9 @@
   <header class="cs-hero">
     <div class="kicker mono"><span class="tagpill">All work</span><span>13 projects · 2023 – 2026</span></div>
     <h1>Everything I've designed</h1>
-    <p class="thesis">Payments, telecom, sport, logistics, fintech and learning products for teams in Algeria, Spain, Canada, the US and Saudi Arabia. Three have full case studies; the rest are summarized here.</p>
+    <p class="thesis">Payments, telecom, sport, logistics, fintech and learning products for teams in Algeria, Spain, Canada, the US and Saudi Arabia. Five have full case studies; the rest are summarized here.</p>
     <div class="filters" role="group" aria-label="Filter projects">
       <button type="button" data-filter="all" aria-pressed="true">All <span>13</span></button>
-      <button type="button" data-filter="case" aria-pressed="false">Case studies <span>3</span></button>
       <button type="button" data-filter="web" aria-pressed="false">Web <span>10</span></button>
       <button type="button" data-filter="mobile" aria-pressed="false">Mobile apps <span>5</span></button>
       <button type="button" data-filter="dashboard" aria-pressed="false">Dashboards <span>6</span></button>
@@ -70,14 +69,14 @@
         <div class="plinks"><a class="btn small primary" href="mobiride.html">Read case study →</a></div>
       </article>
 
-      <article class="pcard" data-tags="web">
+      <article class="pcard featured" data-tags="web">
         <div class="ptop mono"><span>2026 · Telecoming group</span><span class="chip ok">Live</span></div>
         <h2>EFC</h2>
         <p class="psub">MMA streaming and fan platform redesign</p>
         <p>The fan platform for Extreme Fighting Championship, Africa's leading MMA promotion: news, live fights and videos, podcasts, events and a fan zone. I started with a full UI audit, then built a new UI kit and flows.</p>
         <p class="prole mono">UI audit, UX/UI, design system</p>
         <div class="tags"><span class="tag">Website</span><span class="tag">Design system</span></div>
-        <div class="plinks"><a href="https://za.efcfights.net/en">efcfights.net ↗</a></div>
+        <div class="plinks"><a class="btn small primary" href="efc.html">Read case study →</a><a href="https://za.efcfights.net/en">efcfights.net ↗</a></div>
       </article>
 
       <article class="pcard" data-tags="mobile">
@@ -99,14 +98,14 @@
         <div class="plinks"><a href="https://jskabylie.dz/">jskabylie.dz ↗</a></div>
       </article>
 
-      <article class="pcard" data-tags="web mobile dashboard">
+      <article class="pcard featured" data-tags="web mobile dashboard">
         <div class="ptop mono"><span>2025 · ATM Mobilis</span><span class="chip ok">Live</span></div>
         <h2>Participation Committee</h2>
         <p class="psub">Website, app and dashboard</p>
         <p>A platform that replaced paper forms for Mobilis employees: a public website, an employee app to submit and track benefit requests, a worker dashboard and an admin panel.</p>
         <p class="prole mono">UX/UI, design system, hand-off</p>
         <div class="tags"><span class="tag">Website</span><span class="tag">Mobile app</span><span class="tag">Dashboard</span></div>
-        <div class="plinks"><a href="https://cp.mobilis.dz/">cp.mobilis.dz ↗</a></div>
+        <div class="plinks"><a class="btn small primary" href="participation.html">Read case study →</a><a href="https://cp.mobilis.dz/">cp.mobilis.dz ↗</a></div>
       </article>
 
       <article class="pcard" data-tags="web dashboard">
@@ -179,6 +178,6 @@
   </section>
 </main>
 
-<script src="main.js?v=4"></script>
+<script src="main.js?v=7"></script>
 </body>
 </html>

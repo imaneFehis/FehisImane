@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Participation Committee Case Study · Imane Fehis</title>
+<meta name="description" content="How Imane Fehis replaced paper benefit forms at Mobilis with a website, an employee app, a worker dashboard and an admin panel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="style.css?v=14">
+</head>
+<body>
+
+<nav class="pillnav" aria-label="Main">
+  <a class="home" href="index.html"><span class="dot" aria-hidden="true"></span><span class="name">Imane</span></a>
+  <span class="sep" aria-hidden="true"></span>
+  <a href="work.html">Work</a>
+  <a class="hide-sm" href="index.html#about">About</a>
+  <a class="hide-sm" href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+  <button type="button" id="themeToggle" aria-label="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
+  <a class="cta" href="index.html#contact">Let's talk</a>
+</nav>
+
+<main class="frame">
+  <header class="cs-hero">
+    <a class="back" href="work.html">← All work</a>
+    <div class="kicker mono"><span class="tagpill">Case study</span><span class="chip ok pulse">Live · 4.4★ on Google Play</span><span>Website · Mobile app · Dashboards</span></div>
+    <h1>Participation Committee. <span class="h1-sub">Benefits without paperwork.</span></h1>
+    <p class="thesis">I designed a website, an employee app, a worker dashboard and an admin panel that let Mobilis employees request social benefits and track them, with no paper forms.</p>
+    <nav class="chapters" aria-label="Jump to a chapter">
+      <a href="#problem">Problem</a><a href="#design">What I designed</a><a href="#outcome">Outcome</a>
+    </nav>
+  </header>
+
+  <div class="band cover-band"><img src="cover-participation.jpg" alt="Participation Committee employee app on three phones, with 1,000+ downloads and a 4.4 star rating"></div>
+
+  <div class="band bento">
+    <div class="bento-intro">
+      <p>The Participation Committee at Mobilis manages employee benefits such as social aid, loans and health support. This project was part of the company's wider move away from paper-based workflows.</p>
+      <a class="btn small" href="https://cp.mobilis.dz/">Visit the live site ↗</a>
+    </div>
+    <div class="tile"><span class="mono">Role</span><b>Product Designer</b></div>
+    <div class="tile"><span class="mono">Company</span><b>ATM Mobilis</b></div>
+    <div class="tile"><span class="mono">Year</span><b>2025</b></div>
+    <div class="tile"><span class="mono">Delivered</span><b>Flows, UI, design system, hand-off</b></div>
+  </div>
+
+  <div class="band cs-layout">
+    <aside class="toc">
+      <nav aria-label="Case study sections">
+        <div class="big-n mono" id="tocNum">01</div>
+        <div class="cur" id="tocCur">The problem</div>
+        <ol>
+          <li><a href="#problem">01 The problem</a></li>
+          <li><a href="#design">02 What I designed</a></li>
+          <li><a href="#outcome">03 Outcome</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="content">
+      <section class="chapter" id="problem" data-track="" data-n="01" data-title="The problem">
+        <span class="label mono">01 · The problem</span>
+        <h2>Requests lived on paper</h2>
+        <div class="prose"><p>Employees asked for benefits through paper forms. Requests were slow, and nobody could easily see where theirs stood or what was missing.</p></div>
+        <div class="p2s" style="margin-top: 24px;">
+          <div class="p2s-row"><span>Paper forms</span><i aria-hidden="true">→</i><b>Requests submitted from a phone, in a few steps</b></div>
+          <div class="p2s-row"><span>No visibility</span><i aria-hidden="true">→</i><b>A live status for every request, at any time</b></div>
+          <div class="p2s-row"><span>Retyping the same details</span><i aria-hidden="true">→</i><b>Beneficiaries saved once and reused</b></div>
+          <div class="p2s-row"><span>Scattered information</span><i aria-hidden="true">→</i><b>One website for news, offers and documents</b></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="design" data-track="" data-n="02" data-title="What I designed">
+        <span class="label mono">02 · What I designed</span>
+        <h2>Four surfaces, one system</h2>
+        <div class="audit" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+          <div><span class="mono">Employees</span><h4>Mobile app</h4><p>Submit benefit requests, track their status and manage beneficiaries.</p></div>
+          <div><span class="mono">Everyone</span><h4>Website</h4><p>The committee's public site, with news, offers and information for employees.</p></div>
+          <div><span class="mono">Committee team</span><h4>Worker dashboard</h4><p>One place to follow offers and incoming requests.</p></div>
+          <div><span class="mono">Admins</span><h4>Admin panel</h4><p>Manage users and content.</p></div>
+        </div>
+        <h3>The employee journey, in three screens</h3>
+        <div class="phones3">
+          <figure><img src="pc-app-find.jpg" alt="App screen: Nos Prestations, a grid of benefits filtered by Social aid and Loans" loading="lazy"><figcaption><b>1. Find</b> the right benefit in seconds, grouped by type.</figcaption></figure>
+          <figure><img src="pc-app-upload.jpg" alt="App screen: step 2 of 4, the list of required documents and an Add a document button" loading="lazy"><figcaption><b>2. Upload</b> documents in a 4-step flow that lists exactly what's needed.</figcaption></figure>
+          <figure><img src="pc-app-track.jpg" alt="App screen: request #271 with its status In progress and a timeline of approval steps" loading="lazy"><figcaption><b>3. Track</b> every request with a live status and approval timeline.</figcaption></figure>
+        </div>
+        <h3>For the committee team</h3>
+        <figure class="figure shot"><div class="cap mono"><b>Fig. 01</b><span>Worker dashboard: totals first, then pending requests with filters</span></div><a href="pc-dashboard.jpg" class="zoom" aria-label="Open full-size image"><img src="pc-dashboard.jpg" alt="Dashboard with totals for requests, approved, pending and offers, and a filterable table of pending requests" loading="lazy"></a></figure>
+        <div class="highlights">
+          <div><span class="hl-k">A</span><p><b>Summary first.</b> Four totals show the workload before any table.</p></div>
+          <div><span class="hl-k">B</span><p><b>Filter, don't scroll.</b> Status, date, region and wilaya filters narrow the list fast.</p></div>
+          <div><span class="hl-k">C</span><p><b>Status at a glance.</b> Colored chips for pending, approved and rejected.</p></div>
+        </div>
+        <figure class="figure shot"><div class="cap mono"><b>Fig. 02</b><span>Reports: where requests come from and how they're handled</span></div><a href="pc-reports.jpg" class="zoom" aria-label="Open full-size image"><img src="pc-reports.jpg" alt="Reports page with request totals, a bar chart of accepted, pending and refused requests, a category pie chart and the top wilaya trend" loading="lazy"></a></figure>
+        <h3>My role</h3>
+        <div class="prose"><ul>
+          <li>User flows and high-fidelity UI for all four surfaces</li>
+          <li>Design foundations and a documented component library</li>
+          <li>Developer hand-off, working with the frontend team who brought the animations to life</li>
+        </ul></div>
+      </section>
+
+      <section class="chapter" id="outcome" data-track="" data-n="03" data-title="Outcome">
+        <span class="label mono">03 · Outcome</span>
+        <h2>Live and adopted</h2>
+        <div class="outcomes">
+          <div class="outcome"><span class="mono muted">Downloads</span><b>1,000+</b><p>on Google Play.</p></div>
+          <div class="outcome"><span class="mono muted">Rating</span><b>4.4★</b><p>from employees using the app.</p></div>
+          <div class="outcome"><span class="mono muted">Paper</span><b>0 forms</b><p>Requests now go through the app, with a status anyone can check.</p></div>
+        </div>
+        <div class="plinks" style="margin-top: 20px;"><a class="btn small" href="https://play.google.com/store/apps/details?id=dz.mobilis.comiteparticipation">See it on Google Play ↗</a></div>
+        <blockquote class="takeaway">
+          <span class="mono">Takeaway</span>
+          <p>Replacing paper isn't about screens. It's about <em>never having to ask "where is my request?"</em> again.</p>
+        </blockquote>
+      </section>
+    </div>
+  </div>
+
+  <section class="band next">
+    <div class="inner">
+      <a class="big" href="infoempresa.html"><span class="mono">Next case study</span><h2>Infoempresa: built for decisions, not for data →</h2></a>
+      <div class="row mono"><a href="work.html">← Back to all work</a><span>imanefh28@gmail.com</span></div>
+    </div>
+  </section>
+</main>
+
+<script src="main.js?v=9"></script>
+</body>
+</html>

@@ -8,14 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
 <nav class="pillnav" aria-label="Main">
   <a class="home" href="index.html"><span class="dot" aria-hidden="true"></span><span class="name">Imane</span></a>
   <span class="sep" aria-hidden="true"></span>
-  <a href="work.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg><span class="label">All work</span></a>
+  <a href="work.html">Work</a>
+  <a class="hide-sm" href="index.html#about">About</a>
+  <a class="hide-sm" href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
   <button type="button" id="themeToggle" aria-label="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
   <a class="cta" href="index.html#contact">Let's talk</a>
 </nav>
@@ -69,7 +71,7 @@
     <div class="content">
       <section class="chapter" id="problem" data-track="" data-n="01" data-title="The problem">
         <span class="label mono">01 · The problem</span>
-        <h2 data-scramble="">People come with simple questions</h2>
+        <h2>People come with simple questions</h2>
         <div class="prose">
           <p>Users don't come to browse registries. They arrive from Google, a direct link, or a tip from their accountant or lawyer, and they need answers to four questions:</p>
         </div>
@@ -84,7 +86,7 @@
 
       <section class="chapter" id="audit" data-track="" data-n="02" data-title="Audit">
         <span class="label mono">02 · Audit</span>
-        <h2 data-scramble="">Before designing, I listed what was wrong</h2>
+        <h2>Before designing, I listed what was wrong</h2>
         <div class="prose"><p>A heuristic review of the current platform and a benchmark of five competitors (Informa D&amp;B, eInforma, Axesor, Creditsafe and Camerdata), compared on value clarity, pricing transparency, plain language, trust signals and payment friction. Three patterns came out.</p></div>
         <div class="audit">
           <div><span class="mono">01</span><h4>Price came last</h4><p>What a report contained and what it cost weren't clear until checkout, so buying felt like a risk.</p></div>
@@ -95,7 +97,7 @@
 
       <section class="chapter" id="principles" data-track="" data-n="03" data-title="Principles">
         <span class="label mono">03 · Principles</span>
-        <h2 data-scramble="">From problem to principle</h2>
+        <h2>From problem to principle</h2>
         <div class="prose"><p>Each finding became a rule I used to settle every design debate that followed.</p></div>
         <div class="p2s">
           <div class="p2s-row"><span>Dense registry data</span><i aria-hidden="true">→</i><b>Build for decisions: summary first, details on demand</b></div>
@@ -107,7 +109,7 @@
 
       <section class="chapter" id="ia" data-track="" data-n="04" data-title="Structure">
         <span class="label mono">04 · Information architecture</span>
-        <h2 data-scramble="">A sitemap built around needs</h2>
+        <h2>A sitemap built around needs</h2>
         <div class="prose"><p>I rebuilt the sitemap around what people come to do, added browsable company and director databases, and gave the account area one home for reports, alerts, subscriptions and invoices.</p></div>
         <div class="ia" style="margin-top: 24px;">
           <div><b>Companies</b><small>Search, profiles, browsable database</small></div>
@@ -121,7 +123,7 @@
 
       <section class="chapter" id="screens" data-track="" data-n="05" data-title="Screens">
         <span class="label mono">05 · Screens</span>
-        <h2 data-scramble="">The answer first, the details after</h2>
+        <h2>The answer first, the details after</h2>
 
         <figure class="figure shot">
           <div class="cap mono"><b>Fig. 01</b><span>Company page</span></div>
@@ -137,7 +139,7 @@
 
       <section class="chapter" id="checkout" data-track="" data-n="06" data-title="Checkout">
         <span class="label mono">06 · The key decision</span>
-        <h2 data-scramble="">Simplifying the purchase</h2>
+        <h2>Simplifying the purchase</h2>
         <div class="prose"><p>Buying a report was the biggest pain point, so I redesigned the flow end to end. Switch between the two versions below.</p></div>
 
         <div class="figure">
@@ -212,7 +214,7 @@
 
       <section class="chapter" id="outcome" data-track="" data-n="07" data-title="Outcome">
         <span class="label mono">07 · Outcome</span>
-        <h2 data-scramble="">How the product changed</h2>
+        <h2>How the product changed</h2>
         <div class="shift">
           <div><span class="mono">Data</span><i aria-hidden="true">→</i><b>Decisions</b><p>Pages lead with the answer: is this company active, and what does it cost to know more.</p></div>
           <div><span class="mono">Hidden</span><i aria-hidden="true">→</i><b>Upfront</b><p>Contents and prices appear before the cart, with sources and seals near payment.</p></div>
@@ -240,6 +242,6 @@
   </section>
 </main>
 
-<script src="main.js?v=4"></script>
+<script src="main.js?v=7"></script>
 </body>
 </html>

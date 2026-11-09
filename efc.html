@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EFC Case Study · Imane Fehis</title>
+<meta name="description" content="How Imane Fehis redesigned the fan platform of EFC, Africa's leading MMA promotion, starting from a prioritized UI audit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="style.css?v=14">
+</head>
+<body>
+
+<nav class="pillnav" aria-label="Main">
+  <a class="home" href="index.html"><span class="dot" aria-hidden="true"></span><span class="name">Imane</span></a>
+  <span class="sep" aria-hidden="true"></span>
+  <a href="work.html">Work</a>
+  <a class="hide-sm" href="index.html#about">About</a>
+  <a class="hide-sm" href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+  <button type="button" id="themeToggle" aria-label="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
+  <a class="cta" href="index.html#contact">Let's talk</a>
+</nav>
+
+<main class="frame">
+  <header class="cs-hero">
+    <a class="back" href="work.html">← All work</a>
+    <div class="kicker mono"><span class="tagpill">Case study</span><span>Sports media · Streaming · Redesign</span></div>
+    <h1>EFC. A cleaner corner <span class="h1-sub">for fight fans.</span></h1>
+    <p class="thesis">I redesigned the fan platform of EFC, Africa's leading MMA promotion, starting from a detailed audit of what was holding the experience back.</p>
+    <nav class="chapters" aria-label="Jump to a chapter">
+      <a href="#problem">Problem</a><a href="#audit">Audit</a><a href="#design">Design</a><a href="#outcome">Outcome</a>
+    </nav>
+  </header>
+
+  <div class="band cover-band"><img src="cover-efc.jpg" alt="Redesigned EFC home page hero with a fight countdown, shown in a browser window"></div>
+
+  <div class="band bento">
+    <div class="bento-intro">
+      <p>EFC gives fans news, live fights and videos, podcasts, events and subscription offers. The goal was to make the platform clearer, more consistent and easier to use, especially on mobile.</p>
+      <a class="btn small" href="https://za.efcfights.net/en">Visit EFC ↗</a>
+    </div>
+    <div class="tile"><span class="mono">Role</span><b>Product Designer</b></div>
+    <div class="tile"><span class="mono">Company</span><b>DCB Software · Telecoming</b></div>
+    <div class="tile"><span class="mono">Year</span><b>2026</b></div>
+    <div class="tile"><span class="mono">Delivered</span><b>UI audit, UI kit, flows, key pages</b></div>
+  </div>
+
+  <div class="band cs-layout">
+    <aside class="toc">
+      <nav aria-label="Case study sections">
+        <div class="big-n mono" id="tocNum">01</div>
+        <div class="cur" id="tocCur">The problem</div>
+        <ol>
+          <li><a href="#problem">01 The problem</a></li>
+          <li><a href="#audit">02 Audit</a></li>
+          <li><a href="#design">03 Design</a></li>
+          <li><a href="#outcome">04 Outcome</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="content">
+      <section class="chapter" id="problem" data-track="" data-n="01" data-title="The problem">
+        <span class="label mono">01 · The problem</span>
+        <h2>Loud, but hard to follow</h2>
+        <div class="prose">
+          <p>Fans came to watch fights, catch up on news and find the next event. The platform had all of it, but red was everywhere, hierarchy was weak, and on phones many videos didn't even show what they were.</p>
+        </div>
+        <p class="pull">When everything shouts, nothing stands out.</p>
+      </section>
+
+      <section class="chapter" id="audit" data-track="" data-n="02" data-title="Audit">
+        <span class="label mono">02 · Audit</span>
+        <h2>I audited every key page first</h2>
+        <div class="prose"><p>Home, News, Article, EFC Watch, the video player, Podcasts and For You, plus their components. Each issue was ranked by priority.</p></div>
+        <figure class="figure shot "><div class="cap mono"><b>Fig. 01</b><span>Before: audit of the live home page, with notes</span></div><a href="efc-audit.jpg" class="zoom" aria-label="Open full-size image"><img src="efc-audit.jpg" alt="The old EFC home page annotated with audit notes about overused red, inconsistent font weights and empty space" loading="lazy"></a></figure>
+        <div class="audit" style="margin-top: 22px;">
+          <div><span class="mono">01</span><h4>Visual noise</h4><p>Red was used for text, overlays, buttons and accents, so nothing stood out.</p></div>
+          <div><span class="mono">02</span><h4>Weak hierarchy</h4><p>Inconsistent font weights, and bold descriptions that looked like titles.</p></div>
+          <div><span class="mono">03</span><h4>Hover-only cards</h4><p>Video cards showed their title only on hover, so phone users couldn't tell what a video was.</p></div>
+          <div><span class="mono">04</span><h4>Messy layouts</h4><p>Inconsistent grid spacing, mixed card sizes and big empty gaps caused scroll fatigue.</p></div>
+          <div><span class="mono">05</span><h4>Missing context</h4><p>No breadcrumbs, no date, category or read time on articles, and no strong "Now Live" call to action.</p></div>
+          <div><span class="mono">06</span><h4>Usability risks</h4><p>A video carousel with overlapping text and unclear active states.</p></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="design" data-track="" data-n="03" data-title="Design">
+        <span class="label mono">03 · Design</span>
+        <h2>Calmer color, clearer structure</h2>
+        <div class="p2s">
+          <div class="p2s-row"><span>Red everywhere</span><i aria-hidden="true">→</i><b>Red saved for live moments, play buttons and key actions</b></div>
+          <div class="p2s-row"><span>Mixed type weights</span><i aria-hidden="true">→</i><b>One clear type scale for titles, meta and body</b></div>
+          <div class="p2s-row"><span>Titles only on hover</span><i aria-hidden="true">→</i><b>Every card shows its title, on every device</b></div>
+          <div class="p2s-row"><span>Uneven grids</span><i aria-hidden="true">→</i><b>Consistent cards and spacing from one UI kit</b></div>
+        </div>
+        <div style="margin-top: 28px;"></div>
+        <figure class="figure shot "><div class="cap mono"><b>Fig. 02</b><span>New home hero: the next fight, a countdown and the date</span></div><a href="efc-hero.jpg" class="zoom" aria-label="Open full-size image"><img src="efc-hero.jpg" alt="Redesigned hero for EFC 133 Welterweight Championship with a countdown in days, hours and minutes" loading="lazy"></a></figure>
+        <div class="highlights">
+          <div><span class="hl-k">A</span><p><b>One focus.</b> The next fight leads the page, with a countdown that builds anticipation.</p></div>
+          <div><span class="hl-k">B</span><p><b>Red as a signal.</b> It appears only on "vs" and small accents, so it means something again.</p></div>
+        </div>
+        <figure class="figure shot "><div class="cap mono"><b>Fig. 03</b><span>Featured videos: titles always visible, one consistent grid</span></div><a href="efc-videos.jpg" class="zoom" aria-label="Open full-size image"><img src="efc-videos.jpg" alt="Featured videos section with six video cards, each with a play button and a visible title" loading="lazy"></a></figure>
+        <div class="highlights">
+          <div><span class="hl-k">A</span><p><b>No more guessing.</b> Every video card shows its title without hovering.</p></div>
+          <div><span class="hl-k">B</span><p><b>Play is the only red.</b> The action stands out against calm cards.</p></div>
+          <div><span class="hl-k">C</span><p><b>A rhythm, not a pile.</b> A masonry grid with even gaps keeps scrolling easy.</p></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="outcome" data-track="" data-n="04" data-title="Outcome">
+        <span class="label mono">04 · Outcome</span>
+        <h2>What I delivered</h2>
+        <div class="shift">
+          <div><span class="mono">Audit</span><i aria-hidden="true">→</i><b>Priorities</b><p>A ranked list of issues across every key page.</p></div>
+          <div><span class="mono">Skin</span><i aria-hidden="true">→</i><b>UI kit</b><p>Calmer color, a clear type scale, consistent cards, buttons and players.</p></div>
+          <div><span class="mono">Flows</span><i aria-hidden="true">→</i><b>Watching</b><p>How fans move from discovery to watching and subscribing.</p></div>
+          <div><span class="mono">Pages</span><i aria-hidden="true">→</i><b>5 sections</b><p>Home, Events, Library, News and Fanzone, on desktop and mobile.</p></div>
+        </div>
+        <blockquote class="takeaway">
+          <span class="mono">Takeaway</span>
+          <p>Starting with an audit turned "make it look better" into <em>a ranked list of problems</em>, so every design decision had a reason.</p>
+        </blockquote>
+      </section>
+    </div>
+  </div>
+
+  <section class="band next">
+    <div class="inner">
+      <a class="big" href="infoempresa.html"><span class="mono">Next case study</span><h2>Infoempresa: built for decisions, not for data →</h2></a>
+      <div class="row mono"><a href="work.html">← Back to all work</a><span>imanefh28@gmail.com</span></div>
+    </div>
+  </section>
+</main>
+
+<script src="main.js?v=9"></script>
+</body>
+</html>

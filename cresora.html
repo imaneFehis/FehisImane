@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cresora Case Study · Imane Fehis</title>
+<meta name="description" content="How Imane Fehis designed the full MVP of Cresora Commerce, a US healthcare payments platform for 10+ user roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<nav class="pillnav" aria-label="Main">
+  <a class="home" href="index.html"><span class="dot" aria-hidden="true"></span><span class="name">Imane</span></a>
+  <span class="sep" aria-hidden="true"></span>
+  <a href="work.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg><span class="label">All work</span></a>
+  <button type="button" id="themeToggle" aria-label="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
+  <a class="cta" href="index.html#contact">Let's talk</a>
+</nav>
+
+<main class="frame">
+  <header class="cs-hero">
+    <a class="back" href="work.html">← All work</a>
+    <div class="kicker mono"><span class="chip ok">Live</span><span>Case study 01 · Payments · Healthcare · 0→1</span></div>
+    <h1>Cresora: making regulated payments feel like a guided path</h1>
+    <p class="thesis">I designed the complete MVP of Cresora Commerce, a US payments platform for healthcare: every page, for every user, on the partner portal and on the internal admin portal.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://cresoracommerce.com/Home">Visit cresoracommerce.com ↗</a>
+    </div>
+  </header>
+
+  <div class="band meta">
+    <div><span class="mono">Role</span><b>Product Designer, end to end</b></div>
+    <div><span class="mono">Client</span><b>Cresora Commerce, USA</b></div>
+    <div><span class="mono">Year</span><b>2026</b></div>
+    <div><span class="mono">Surfaces</span><b>Partner portal, admin portal</b></div>
+    <div><span class="mono">Tools</span><b>Figma</b></div>
+    <div><span class="mono">Users</span><b>10+ roles</b></div>
+  </div>
+
+  <div class="band cs-layout">
+    <aside class="toc">
+      <nav aria-label="Case study sections">
+        <div class="big-n mono" id="tocNum">01</div>
+        <div class="cur" id="tocCur">Overview</div>
+        <ol>
+          <li><a href="#overview">01 Overview</a></li>
+          <li><a href="#problem">02 The problem</a></li>
+          <li><a href="#constraints">03 Constraints</a></li>
+          <li><a href="#users">04 Users</a></li>
+          <li><a href="#decisions">05 Key decisions</a></li>
+          <li><a href="#states">06 Every state</a></li>
+          <li><a href="#outcome">07 Outcome</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="content">
+      <section class="chapter" id="overview" data-track="" data-n="01" data-title="Overview">
+        <span class="label mono">01 · Overview</span>
+        <h2 data-scramble="">The short version</h2>
+        <div class="tldr" style="border: 1px solid var(--line); border-radius: 18px; overflow: hidden;">
+          <div><span class="mono">Problem</span><p>Software partners had to get through onboarding, compliance, certification and review before taking a single payment, and it was easy to get lost on the way.</p></div>
+          <div><span class="mono">What I did</span><p>Designed the full MVP: a stage-aware partner portal, an internal admin portal for six review teams, and one UI kit shared by both.</p></div>
+          <div><span class="mono">Outcome</span><p>The MVP launched in April 2026, with over $4M in initial funding behind it.</p></div>
+        </div>
+        <div class="nda">
+          <span class="chip idle">Under NDA</span>
+          <p>Cresora's screens are confidential, so this case study shows my process and decisions instead. The interactive go-live gate in section 06 is a simplified recreation, not the real UI. Happy to walk through the work live in an interview.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="problem" data-track="" data-n="02" data-title="The problem">
+        <span class="label mono">02 · The problem</span>
+        <h2 data-scramble="">A long, regulated road to the first payment</h2>
+        <div class="prose">
+          <p>Cresora is payments infrastructure for healthcare and other regulated industries. Software companies (ISV partners) connect Cresora to their products so their clients, such as dental clinics, physical therapy practices and urgent care centers, can take payments.</p>
+          <p>Before that first payment, a partner has to integrate and test, sign a HIPAA Business Associate Agreement, complete a PCI questionnaire, pass certification in three tiers and get each merchant approved. Cresora's own teams review every step.</p>
+          <p>So the core design question was: <strong>how do you keep people oriented in a process with this many steps, owners and ways to fail?</strong></p>
+        </div>
+      </section>
+
+      <section class="chapter" id="constraints" data-track="" data-n="03" data-title="Constraints">
+        <span class="label mono">03 · Constraints</span>
+        <h2 data-scramble="">What shaped the design</h2>
+        <div class="constraints">
+          <div><span class="mono muted">Regulation</span><h4>HIPAA and PCI</h4><p>Compliance documents have real statuses and expiry dates, and every action on money or health data needs to be traceable.</p></div>
+          <div><span class="mono muted">Users</span><h4>10+ roles</h4><p>Four partner roles with different permissions, and six internal teams that each own a different review step.</p></div>
+          <div><span class="mono muted">Scope</span><h4>Two portals, one system</h4><p>Partner and admin portals share one visual language and UI kit, so a status means the same thing everywhere.</p></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="users" data-track="" data-n="04" data-title="Users">
+        <span class="label mono">04 · Users</span>
+        <h2 data-scramble="">Two sides, many jobs</h2>
+        <div class="figs-2">
+          <div class="card">
+            <span class="mono" style="color: var(--accent-text);">Partner side</span>
+            <h4>Software companies integrating Cresora</h4>
+            <p class="muted"><b>Technical lead:</b> integration, testing, API keys, webhooks, certification.</p>
+            <p class="muted"><b>Operations lead:</b> onboarding progress, merchants, go-live readiness.</p>
+            <p class="muted"><b>Team roles:</b> Owner, Admin, Developer and Compliance, each with its own permissions.</p>
+          </div>
+          <div class="card">
+            <span class="mono" style="color: var(--accent-text);">Cresora internal</span>
+            <h4>Teams that review and approve</h4>
+            <p class="muted">Admin, Risk Ops, Underwriting, Pre-underwriting, Compliance and Support. Each one reviews, approves or monitors a different part of the partner and merchant journey.</p>
+          </div>
+        </div>
+        <h3>What the requirements told me</h3>
+        <div class="insights">
+          <div class="insight"><span class="mono">01</span><span class="heard">Partners couldn't tell what was left before go-live, or whether the next move was theirs or Cresora's.</span><span class="so">A stage-aware dashboard and a checklist that labels every step "You" or "Cresora"</span></div>
+          <div class="insight"><span class="mono">02</span><span class="heard">Six internal teams each own a different review step, and every decision on money or health data has to be traceable.</span><span class="so">Review queues per team, required reasons for overrides, and a full audit log</span></div>
+          <div class="insight"><span class="mono">03</span><span class="heard">Payments fail in many ways: declines, voids, refunds, ACH returns and chargebacks.</span><span class="so">The whole transaction lifecycle designed, with a confirmation on every irreversible action</span></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="decisions" data-track="" data-n="05" data-title="Key decisions">
+        <span class="label mono">05 · Key decisions</span>
+        <h2 data-scramble="">Three calls that defined the product</h2>
+
+        <article class="decision-card">
+          <header><span class="mono">Decision 01</span><h3>Always show where you are and what blocks you</h3></header>
+          <p class="tension">In a long, regulated process, partners kept needing the same answer: what's left before we can go live, and is it on us or on Cresora?</p>
+          <div class="options">
+            <div class="option"><div class="top"><h4>Separate pages per task</h4><span class="chip idle">Not chosen</span></div><p>One page each for integration, compliance, certification and merchants. Simple to build, but partners would have to visit every page to work out what still blocks launch.</p></div>
+            <div class="option chosen"><div class="top"><h4>Stage-aware path</h4><span class="chip ok">Chosen</span></div><p>A dashboard that adapts to each stage (first login, sandbox, certification, live), an onboarding checklist, and a go-live gate that lists exactly what blocks launch: blocked, in review, all passed, approved.</p></div>
+          </div>
+          <div class="why">
+            <div><span class="mono">Why</span><p>Every screen tells users their current stage and what comes next, so nobody has to email support to find out where they stand.</p></div>
+            <div><span class="mono">Trade-off</span><p>Many more states to design and keep in sync. The dashboard changes across four stages, and every checklist step needs done, in progress, failed and blocked versions.</p></div>
+          </div>
+        </article>
+
+        <article class="decision-card">
+          <header><span class="mono">Decision 02</span><h3>Add friction where money moves</h3></header>
+          <p class="tension">Voids, refunds, reversals and chargebacks can't be undone. Speed matters for operations teams, but one wrong click costs real money.</p>
+          <div class="options">
+            <div class="option"><div class="top"><h4>One-click actions</h4><span class="chip idle">Not chosen</span></div><p>Faster for operations teams handling many transactions, but one misclick on a refund or void moves real money and can't be undone.</p></div>
+            <div class="option chosen"><div class="top"><h4>Confirm every irreversible action</h4><span class="chip ok">Chosen</span></div><p>A confirmation step for each irreversible payment action, with the transaction's full lifecycle visible: authorize, capture, reverse, void, partial or full refund, ACH states and chargebacks.</p></div>
+          </div>
+          <div class="why">
+            <div><span class="mono">Why</span><p>In payments, a moment of friction is cheaper than an incorrect refund.</p></div>
+            <div><span class="mono">Trade-off</span><p>Each irreversible action takes one extra step. I kept it to a single focused dialog with a required reason, so it only slows people down where it matters.</p></div>
+          </div>
+        </article>
+
+        <article class="decision-card">
+          <header><span class="mono">Decision 03</span><h3>Make overrides accountable</h3></header>
+          <p class="tension">Admins sometimes need to waive a certification check or override the go-live gate. That power is necessary, and also risky.</p>
+          <div class="options">
+            <div class="option"><div class="top"><h4>A simple override switch</h4><span class="chip idle">Not chosen</span></div><p>Quick for admins, but it leaves no record of who bypassed a check or why, which is exactly what a compliance review would flag.</p></div>
+            <div class="option chosen"><div class="top"><h4>Reason required, always logged</h4><span class="chip ok">Chosen</span></div><p>Gate overrides and waived checks can't be saved without a written reason. Every action lands in an audit log with event details, and review work runs through queues.</p></div>
+          </div>
+          <div class="why">
+            <div><span class="mono">Why</span><p>Payments and healthcare data demand accountability: anyone should be able to see who changed what, and why.</p></div>
+            <div><span class="mono">Trade-off</span><p>Overrides take longer, and admins must write a reason every time. On a platform handling payments and health data, that accountability is worth it.</p></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="chapter" id="states" data-track="" data-n="06" data-title="Every state">
+        <span class="label mono">06 · Every state</span>
+        <h2 data-scramble="">Designing beyond the happy path</h2>
+        <div class="prose"><p>Failures, blocks, rejections, expirations and suspensions each got a clear message and a next step. Try the gate below, then scan the states I designed.</p></div>
+
+        <div class="figure">
+          <div class="cap mono"><b>Fig. 01</b><span>Interactive recreation: the go-live gate resolving its blockers</span><button type="button" class="replay" data-replay="gate" style="margin-left: auto;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg>Replay</button></div>
+          <div class="body">
+            <div class="demo" id="demoGate">
+              <div class="demo-head"><span>Go-live checklist</span><span class="chip warn" data-k="head">3 blocking</span></div>
+              <div class="bar"><i></i></div>
+              <div class="demo-row"><div class="l">Certification<small>Tier 1 to 3 checks</small></div><span class="chip ok" data-k="cert">Passed</span></div>
+              <div class="demo-row"><div class="l">HIPAA BAA<small>Business Associate Agreement</small></div><span class="chip review" data-k="baa">Awaiting counter-sign</span></div>
+              <div class="demo-row"><div class="l">PCI SAQ<small>Security questionnaire</small></div><span class="chip block" data-k="pci">Missing</span></div>
+              <div class="demo-row"><div class="l">Merchant onboarding<small>8-step application</small></div><span class="chip idle" data-k="mer">Step 6 of 8</span></div>
+              <button type="button" class="demo-btn" disabled="">Go live</button>
+            </div>
+          </div>
+        </div>
+
+        <h3>Onboarding situations</h3>
+        <div class="states">
+          <div class="state"><span class="chip idle">Day one</span><p>Empty dashboard with a checklist that starts the journey.</p></div>
+          <div class="state"><span class="chip review">Checks in progress</span><p>What's being reviewed, by whom, and what the partner can do meanwhile.</p></div>
+          <div class="state"><span class="chip block">Certification failed</span><p>A failed-checks queue that names each failure and how to fix it.</p></div>
+          <div class="state"><span class="chip warn">Blocked on Cresora</span><p>Makes it clear the next move is on Cresora's side, not the partner's.</p></div>
+          <div class="state"><span class="chip block">Merchant rejected</span><p>The reason, plus the path to fix and resubmit.</p></div>
+          <div class="state"><span class="chip review">Near go-live</span><p>The last few items, highlighted so nothing gets missed.</p></div>
+          <div class="state"><span class="chip ok">All complete</span><p>Ready to launch, with the go-live action unlocked.</p></div>
+          <div class="state"><span class="chip block">Account suspended</span><p>What happened and who to contact.</p></div>
+          <div class="state"><span class="chip warn">API error</span><p>Integration health with uptime, latency and error rate.</p></div>
+        </div>
+
+        <h3>HIPAA agreement lifecycle</h3>
+        <div class="states">
+          <div class="state"><span class="chip idle">Not started</span></div>
+          <div class="state"><span class="chip warn">Awaiting partner signature</span></div>
+          <div class="state"><span class="chip review">Awaiting counter-signature</span></div>
+          <div class="state"><span class="chip ok">Executed</span></div>
+          <div class="state"><span class="chip block">Expired</span></div>
+        </div>
+
+        <h3>Secure sign-in</h3>
+        <div class="states">
+          <div class="state"><span class="chip block">Invalid credentials</span></div>
+          <div class="state"><span class="chip review">MFA required</span></div>
+          <div class="state"><span class="chip warn">Suspicious login</span></div>
+          <div class="state"><span class="chip block">Locked account</span></div>
+        </div>
+
+        <h3>Errors caught where they happen</h3>
+      </section>
+
+      <section class="chapter" id="outcome" data-track="" data-n="07" data-title="Outcome">
+        <span class="label mono">07 · Outcome</span>
+        <h2 data-scramble="">What happened next</h2>
+        <div class="outcomes">
+          <div class="outcome"><span class="mono muted">Launch</span><b>Apr 2026</b><p>Cresora Commerce officially launched, <a href="https://natlawreview.com/press-releases/cresora-commerce-launches-over-4m-funding-redefine-ai-driven-commerce">backed by over $4M in initial funding ↗</a>.</p></div>
+          <div class="outcome"><span class="mono muted">Scope</span><b>10+ roles</b><p>Designed for, across a partner portal and an internal admin portal.</p></div>
+          <div class="outcome"><span class="mono muted">Delivery</span><b>Full MVP</b><p>Every page for every role, on the partner and admin portals, with one shared UI kit.</p></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="band next">
+    <div class="inner">
+      <a class="big" href="infoempresa.html"><span class="mono">Next case study · 02</span><h2>Infoempresa: built for decisions, not for data →</h2></a>
+      <div class="row mono"><a href="work.html">← Back to all work</a><span>imanefh28@gmail.com</span></div>
+    </div>
+  </section>
+</main>
+
+<script src="main.js?v=4"></script>
+</body>
+</html>

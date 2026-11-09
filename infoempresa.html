@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infoempresa Case Study · Imane Fehis</title>
+<meta name="description" content="How Imane Fehis redesigned Infoempresa, a Spanish business-information platform, around decisions instead of data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<nav class="pillnav" aria-label="Main">
+  <a class="home" href="index.html"><span class="dot" aria-hidden="true"></span><span class="name">Imane</span></a>
+  <span class="sep" aria-hidden="true"></span>
+  <a href="work.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg><span class="label">All work</span></a>
+  <button type="button" id="themeToggle" aria-label="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
+  <a class="cta" href="index.html#contact">Let's talk</a>
+</nav>
+
+<main class="frame">
+  <header class="cs-hero">
+    <a class="back" href="work.html">← All work</a>
+    <div class="kicker mono"><span class="tagpill">Case study 02</span><span class="chip ok pulse">Live on infoempresa.com</span><span>Data platform · E-commerce · Redesign</span></div>
+    <h1>Infoempresa: built for decisions, <span class="h1-sub">not for data</span></h1>
+    <p class="thesis">A research-led redesign of a Spanish business-information platform, so that anyone, not only experts, can check a company and buy a report with confidence.</p>
+    <nav class="chapters" aria-label="Jump to a chapter">
+      <a href="#problem">Problem</a><a href="#audit">Audit</a><a href="#principles">Principles</a><a href="#ia">Structure</a><a href="#screens">Screens</a><a href="#checkout">Checkout</a><a href="#outcome">Outcome</a>
+    </nav>
+  </header>
+
+  <div class="band showcase">
+    <div class="browser">
+      <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>infoempresa.com</span></div>
+      <img src="images/info-home.jpg" alt="Redesigned Infoempresa home page: a blue hero with the headline Verify any Spanish company in seconds, a search bar for company name, tax ID or director, and four key figures below" fetchpriority="high">
+    </div>
+  </div>
+
+  <div class="band bento">
+    <div class="bento-intro">
+      <p>Infoempresa helps people check Spanish companies and directors: profiles, financial reports, annual accounts, risk reports, debtors lists and alerts when the official register changes. I redesigned it end to end for the Telecoming group.</p>
+      <a class="btn small" href="https://www.infoempresa.com/">Visit the live site ↗</a>
+    </div>
+    <div class="tile"><span class="mono">Role</span><b>Product Designer</b></div>
+    <div class="tile"><span class="mono">Company</span><b>DCB Software · Telecoming</b></div>
+    <div class="tile"><span class="mono">Year</span><b>2026</b></div>
+    <div class="tile"><span class="mono">Delivered</span><b>Research, IA, UI kit, flows</b></div>
+  </div>
+
+  <div class="band cs-layout">
+    <aside class="toc">
+      <nav aria-label="Case study sections">
+        <div class="big-n mono" id="tocNum">01</div>
+        <div class="cur" id="tocCur">The problem</div>
+        <ol>
+          <li><a href="#problem">01 The problem</a></li>
+          <li><a href="#audit">02 Audit</a></li>
+          <li><a href="#principles">03 Principles</a></li>
+          <li><a href="#ia">04 Structure</a></li>
+          <li><a href="#screens">05 Screens</a></li>
+          <li><a href="#checkout">06 Checkout</a></li>
+          <li><a href="#outcome">07 Outcome</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="content">
+      <section class="chapter" id="problem" data-track="" data-n="01" data-title="The problem">
+        <span class="label mono">01 · The problem</span>
+        <h2 data-scramble="">People come with simple questions</h2>
+        <div class="prose">
+          <p>Users don't come to browse registries. They arrive from Google, a direct link, or a tip from their accountant or lawyer, and they need answers to four questions:</p>
+        </div>
+        <div class="questions" style="margin-top: 22px;">
+          <div><span class="mono">Q1</span>Does this company exist?</div>
+          <div><span class="mono">Q2</span>Who is responsible?</div>
+          <div><span class="mono">Q3</span>Is there a financial or legal risk?</div>
+          <div><span class="mono">Q4</span>Has something changed?</div>
+        </div>
+        <p class="pull">The data was all there. The answers weren't.</p>
+      </section>
+
+      <section class="chapter" id="audit" data-track="" data-n="02" data-title="Audit">
+        <span class="label mono">02 · Audit</span>
+        <h2 data-scramble="">Before designing, I listed what was wrong</h2>
+        <div class="prose"><p>A heuristic review of the current platform and a benchmark of five competitors (Informa D&amp;B, eInforma, Axesor, Creditsafe and Camerdata), compared on value clarity, pricing transparency, plain language, trust signals and payment friction. Three patterns came out.</p></div>
+        <div class="audit">
+          <div><span class="mono">01</span><h4>Price came last</h4><p>What a report contained and what it cost weren't clear until checkout, so buying felt like a risk.</p></div>
+          <div><span class="mono">02</span><h4>Trust was missing near payment</h4><p>Across the benchmark, clear prices and visible data sources were what made buying feel safe.</p></div>
+          <div><span class="mono">03</span><h4>Registry language</h4><p>Legal and registry terms were hard to understand for anyone who isn't an expert.</p></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="principles" data-track="" data-n="03" data-title="Principles">
+        <span class="label mono">03 · Principles</span>
+        <h2 data-scramble="">From problem to principle</h2>
+        <div class="prose"><p>Each finding became a rule I used to settle every design debate that followed.</p></div>
+        <div class="p2s">
+          <div class="p2s-row"><span>Dense registry data</span><i aria-hidden="true">→</i><b>Build for decisions: summary first, details on demand</b></div>
+          <div class="p2s-row"><span>Legal and registry jargon</span><i aria-hidden="true">→</i><b>Clarity is a feature: plain language everywhere</b></div>
+          <div class="p2s-row"><span>Price only at checkout</span><i aria-hidden="true">→</i><b>Trust at every step: contents, price and sources upfront</b></div>
+          <div class="p2s-row"><span>No clear next step</span><i aria-hidden="true">→</i><b>Guide, don't test: one obvious action per screen</b></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="ia" data-track="" data-n="04" data-title="Structure">
+        <span class="label mono">04 · Information architecture</span>
+        <h2 data-scramble="">A sitemap built around needs</h2>
+        <div class="prose"><p>I rebuilt the sitemap around what people come to do, added browsable company and director databases, and gave the account area one home for reports, alerts, subscriptions and invoices.</p></div>
+        <div class="ia" style="margin-top: 24px;">
+          <div><b>Companies</b><small>Search, profiles, browsable database</small></div>
+          <div><b>Directors</b><small>Profiles, roles, browsable database</small></div>
+          <div><b>Monitoring</b><small>Alerts when the register changes</small></div>
+          <div><b>My account</b><small>Reports, alerts, subscription, invoices</small></div>
+          <div><b>Cart</b><small>One-page order and payment</small></div>
+          <div><b>Help</b><small>Plain-language answers</small></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="screens" data-track="" data-n="05" data-title="Screens">
+        <span class="label mono">05 · Screens</span>
+        <h2 data-scramble="">The answer first, the details after</h2>
+
+        <figure class="figure shot">
+          <div class="cap mono"><b>Fig. 01</b><span>Company page</span></div>
+          <a href="images/info-company.jpg" class="zoom" aria-label="Open full-size image of the company page"><img src="images/info-company.jpg" alt="Company page showing an Active status chip, three report cards with prices without VAT, an accounting-year picker and the company overview" loading="lazy"></a>
+        </figure>
+        <div class="highlights">
+          <div><span class="hl-k">A</span><p><b>Status first.</b> An "Active" chip next to the company name answers the first question at a glance.</p></div>
+          <div><span class="hl-k">B</span><p><b>Prices on the page.</b> Three report cards show what each one is and what it costs, without VAT, before anything goes in the cart.</p></div>
+          <div><span class="hl-k">C</span><p><b>Pick the year.</b> Annual accounts open a year picker, with the latest marked, so people buy the right document.</p></div>
+          <div><span class="hl-k">D</span><p><b>Facts, not paragraphs.</b> Tax ID, legal form, address, sector and capital in a scannable overview.</p></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="checkout" data-track="" data-n="06" data-title="Checkout">
+        <span class="label mono">06 · The key decision</span>
+        <h2 data-scramble="">Simplifying the purchase</h2>
+        <div class="prose"><p>Buying a report was the biggest pain point, so I redesigned the flow end to end. Switch between the two versions below.</p></div>
+
+        <div class="figure">
+          <div class="cap mono"><b>Fig. 02</b><span>Interactive: report purchase, before and after</span></div>
+          <div class="body" style="flex-direction: column; gap: 16px;">
+            <div class="seg" role="group" aria-label="Compare checkout versions">
+              <button type="button" data-mode="before" aria-pressed="false">Before</button>
+              <button type="button" data-mode="after" aria-pressed="true">After</button>
+            </div>
+            <div class="demo" id="demoBuy">
+              <div data-show="before" class="hide">
+                <div class="demo-head"><span>Credit report</span><span class="chip idle">Step 1 of 3</span></div>
+                <div class="demo-row"><div class="l">What's included?<small>Shown after adding to cart</small></div><span class="chip block">Unclear</span></div>
+                <div class="demo-row"><div class="l">Price<small>Calculated at checkout</small></div><span class="chip block">Hidden</span></div>
+                <div class="demo-row"><div class="l">Then<small>Cart → Billing → Payment</small></div><span class="chip warn">3 pages</span></div>
+                <button type="button" class="demo-btn">Add to cart</button>
+              </div>
+              <div data-show="after">
+                <div class="demo-head"><span>Credit report</span><span class="chip ok">One-page checkout</span></div>
+                <div class="demo-row"><div class="l">Simple report<small>Price shown upfront, without VAT</small></div><span class="price">€9.99</span></div>
+                <ul class="includes">
+                  <li>Financial statements and annual accounts</li>
+                  <li>Directors and their roles</li>
+                  <li>Risk report with data sources</li>
+                </ul>
+                <div class="demo-row"><div class="l">Billing details<small>Prefilled from your account</small></div><span class="chip ok">Ready</span></div>
+                <button type="button" class="demo-btn go">Pay and get report</button>
+              </div>
+            </div>
+            <p class="mono muted">"Before" is a simplified illustration of the old flow.</p>
+          </div>
+        </div>
+
+        <article class="decision-card">
+          <header><span class="mono">Decision 01</span><h3>One checkout page instead of several</h3></header>
+          <p class="tension">Every extra step before payment was a chance to drop off, but people still needed to review what they were buying.</p>
+          <div class="options">
+            <div class="option"><div class="top"><h4>A multi-step wizard</h4><span class="chip idle">Not chosen</span></div><p>Cart, billing and payment as separate pages. Each page stays simple, but every extra step is a chance to drop off, and the total still came at the very end.</p></div>
+            <div class="option chosen"><div class="top"><h4>Order and payment together</h4><span class="chip ok">Chosen</span></div><p>A summary of what you get and the full price before checkout, then one page with the order and payment, prefilled billing details and inline validation.</p></div>
+          </div>
+          <div class="why">
+            <div><span class="mono">Why</span><p>Fewer steps means less drop-off, and showing everything upfront means no surprises at the end.</p></div>
+            <div><span class="mono">Trade-off</span><p>A denser page. I split it into an order section and a payment section that open one at a time, so everything stays on one page without feeling crowded.</p></div>
+          </div>
+          <div class="figs-2">
+            <figure class="figure shot"><div class="cap mono"><b>Fig. 03</b><span>Live: order summary, VAT and invoice type on one card</span></div><a href="images/info-checkout.jpg" class="zoom" aria-label="Open full-size image of the checkout"><img src="images/info-checkout.jpg" alt="Live cart: order summary with one simple report, subtotal, VAT and total, a choice of simplified or full invoice, and a Confirm button" loading="lazy"></a></figure>
+            <figure class="figure shot"><div class="cap mono"><b>Fig. 04</b><span>Live: four payment options, with trust seals below</span></div><a href="images/info-payment.jpg" class="zoom" aria-label="Open full-size image of the payment step"><img src="images/info-payment.jpg" alt="Live payment step: card, Apple Pay or Google Pay, PayPal and Infoempresa credits, with secure payment seals below" loading="lazy"></a></figure>
+          </div>
+        </article>
+
+        <article class="decision-card">
+          <header><span class="mono">Decision 02</span><h3>No pressure at the moment of payment</h3></header>
+          <p class="tension">E-commerce patterns push upsells at checkout. But this audience is checking companies for legal and financial reasons, and pressure erodes trust.</p>
+          <div class="options">
+            <div class="option"><div class="top"><h4>Upsell at checkout</h4><span class="chip idle">Not chosen</span></div><p>The usual approach: bundles and add-ons right before payment.</p></div>
+            <div class="option chosen"><div class="top"><h4>Neutral, institutional tone</h4><span class="chip ok">Chosen</span></div><p>No cross-selling, and a tone designed for clarity rather than persuasion.</p></div>
+          </div>
+          <div class="why">
+            <div><span class="mono">Why</span><p>Trust at every step, especially before payment. For a data provider, credibility is the product.</p></div>
+            <div><span class="mono">Trade-off</span><p>Less room for short-term upsells. For a data provider, credibility is the product, so trust won.</p></div>
+          </div>
+        </article>
+
+        <h3>Every outcome has a state</h3>
+        <div class="states">
+          <div class="state"><span class="chip ok">Success</span><p>Confirmation with delivery information for the report.</p></div>
+          <div class="state"><span class="chip warn">Insufficient credit</span><p>Explains the shortfall and how to top up.</p></div>
+          <div class="state"><span class="chip block">Payment failed</span><p>What went wrong, with a clear retry.</p></div>
+          <div class="state"><span class="chip review">Inline validation</span><p>Billing errors caught field by field, before submit.</p></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="outcome" data-track="" data-n="07" data-title="Outcome">
+        <span class="label mono">07 · Outcome</span>
+        <h2 data-scramble="">How the product changed</h2>
+        <div class="shift">
+          <div><span class="mono">Data</span><i aria-hidden="true">→</i><b>Decisions</b><p>Pages lead with the answer: is this company active, and what does it cost to know more.</p></div>
+          <div><span class="mono">Hidden</span><i aria-hidden="true">→</i><b>Upfront</b><p>Contents and prices appear before the cart, with sources and seals near payment.</p></div>
+          <div><span class="mono">3 pages</span><i aria-hidden="true">→</i><b>1 page</b><p>Order, billing and payment live on a single checkout.</p></div>
+          <div><span class="mono">Jargon</span><i aria-hidden="true">→</i><b>Plain words</b><p>Registry terms are translated for people who aren't experts.</p></div>
+        </div>
+        <div class="outcomes" style="margin-top: 16px;">
+          <div class="outcome"><span class="mono muted">Shipped</span><b>Live</b><p>The redesign is live on <a href="https://www.infoempresa.com/">infoempresa.com</a>.</p></div>
+          <div class="outcome"><span class="mono muted">Benchmark</span><b>5</b><p>competitors compared on pricing, language, trust and payment friction.</p></div>
+          <div class="outcome"><span class="mono muted">Structure</span><b>6</b><p>top-level sections in the new sitemap, built around what users need.</p></div>
+        </div>
+        <blockquote class="takeaway">
+          <span class="mono">Takeaway</span>
+          <p>Writing principles early gave me one test for every screen: <em>does this help someone decide?</em> That made it much easier to cut what didn't.</p>
+        </blockquote>
+      </section>
+    </div>
+  </div>
+
+  <section class="band next">
+    <div class="inner">
+      <a class="big" href="mobiride.html"><span class="mono">Next case study · 03</span><h2>MobiRide: the right driver at the right place →</h2></a>
+      <div class="row mono"><a href="work.html">← Back to all work</a><span>imanefh28@gmail.com</span></div>
+    </div>
+  </section>
+</main>
+
+<script src="main.js?v=4"></script>
+</body>
+</html>

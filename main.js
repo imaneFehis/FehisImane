@@ -186,3 +186,90 @@
   }
   btns.forEach(function (b) { b.addEventListener('click', function () { apply(b.getAttribute('data-filter')); }); });
 })();
+
+/* ---------- Motion v7: avatar follow, card spotlight, magnetic buttons ---------- */
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var fine = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+  var av = document.getElementById('avatar');
+  if (av && fine) {
+    window.addEventListener('mousemove', function (e) {
+      var r = av.getBoundingClientRect();
+      var dx = (e.clientX - (r.left + r.width / 2)) / window.innerWidth;
+      var dy = (e.clientY - (r.top + r.height / 2)) / window.innerHeight;
+      av.style.setProperty('--ry', (dx * 24).toFixed(2) + 'deg');
+      av.style.setProperty('--rx', (-dy * 24).toFixed(2) + 'deg');
+    });
+  }
+  if (!fine) return;
+  document.querySelectorAll('.pc').forEach(function (c) {
+    c.addEventListener('mousemove', function (e) {
+      var r = c.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      c.style.setProperty('--mx', x + 'px'); c.style.setProperty('--my', y + 'px');
+      c.style.setProperty('--px', ((x / r.width - .5) * 14).toFixed(1) + 'px');
+      c.style.setProperty('--py', ((y / r.height - .5) * 10).toFixed(1) + 'px');
+    });
+  });
+  document.querySelectorAll('.magnetic, .pillnav .cta').forEach(function (b) {
+    b.addEventListener('mousemove', function (e) {
+      var r = b.getBoundingClientRect();
+      b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * .25).toFixed(1) + 'px,' + ((e.clientY - r.top - r.height / 2) * .3).toFixed(1) + 'px)';
+    });
+    b.addEventListener('mouseleave', function () { b.style.transform = ''; });
+  });
+})();
+
+/* ---------- About: interactive dot tiles ---------- */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('canvas.dots').forEach(function (cv) {
+    var ctx = cv.getContext('2d'), mx = -999, my = -999, w, h, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    function size() { var r = cv.getBoundingClientRect(); w = r.width; h = r.height; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(); }
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      var col = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#3B1FA8';
+      ctx.fillStyle = col;
+      for (var x = 8; x < w; x += 14) for (var y = 8; y < h; y += 14) {
+        var d = Math.hypot(x - mx, y - my), k = Math.max(0, 1 - d / 90);
+        var dx = d ? (x - mx) / d * k * 10 : 0, dy = d ? (y - my) / d * k * 10 : 0;
+        ctx.globalAlpha = .25 + k * .75; ctx.beginPath(); ctx.arc(x + dx, y + dy, 1.4 + k * 1.6, 0, 6.283); ctx.fill();
+      }
+    }
+    cv.parentNode.addEventListener('mousemove', function (e) { if (reduce) return; var r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; requestAnimationFrame(draw); });
+    cv.parentNode.addEventListener('mouseleave', function () { mx = my = -999; requestAnimationFrame(draw); });
+    window.addEventListener('resize', size); size();
+  });
+})();
+
+/* ---------- About: mini avatar puzzle ---------- */
+(function () {
+  var grid = document.getElementById('pzGrid'); if (!grid) return;
+  var msg = document.getElementById('pzMsg'), order = [], picked = null;
+  function render() {
+    grid.innerHTML = '';
+    order.forEach(function (p, i) {
+      var b = document.createElement('button'); b.type = 'button';
+      b.setAttribute('aria-label', 'Piece ' + (p + 1) + ' in position ' + (i + 1));
+      b.setAttribute('aria-pressed', picked === i ? 'true' : 'false');
+      b.style.backgroundPosition = (p % 3) * 50 + '% ' + Math.floor(p / 3) * 50 + '%';
+      b.addEventListener('click', function () { pick(i); });
+      grid.appendChild(b);
+    });
+    var solved = order.every(function (p, i) { return p === i; });
+    grid.classList.toggle('solved', solved);
+    if (solved) msg.textContent = 'Solved! You found me.';
+  }
+  function pick(i) {
+    if (picked === null) { picked = i; msg.textContent = 'Now pick a piece to swap with.'; }
+    else { var t = order[i]; order[i] = order[picked]; order[picked] = t; picked = null; msg.textContent = 'Keep going…'; }
+    render();
+  }
+  function shuffle() {
+    order = [0,1,2,3,4,5,6,7,8];
+    do { for (var i = 8; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = order[i]; order[i] = order[j]; order[j] = t; } }
+    while (order.every(function (p, k) { return p === k; }));
+    picked = null; msg.textContent = 'Click two pieces to swap them.'; render();
+  }
+  document.getElementById('pzShuffle').addEventListener('click', shuffle);
+  shuffle();
+})();

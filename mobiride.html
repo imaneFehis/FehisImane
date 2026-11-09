@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
 
@@ -25,45 +25,49 @@
 <main class="frame">
   <header class="cs-hero">
     <a class="back" href="work.html">← All work</a>
-    <div class="kicker mono"><span class="chip review">Internal platform</span><span>Case study 03 · Mobile + dashboard · Research-led</span></div>
-    <h1>MobiRide: the right driver at the right place</h1>
-    <p class="thesis">An internal platform for Mobilis's transport department. Employees request rides to work sites, managers confirm missions, admins assign drivers in real time, and drivers get clear tasks on mobile, with no back-and-forth.</p>
+    <div class="kicker mono"><span class="tagpill">Case study</span><span class="chip review">Internal platform</span><span>Mobile · Dashboard · Research-led</span></div>
+    <h1>MobiRide. <span class="h1-sub">Every company ride, one clear status.</span></h1>
+    <p class="thesis">An internal platform for Mobilis's transport department. Employees request rides, managers confirm missions, admins assign drivers in real time, and drivers get clear tasks on mobile.</p>
+    <nav class="chapters" aria-label="Jump to a chapter">
+      <a href="#problem">Problem</a><a href="#research">Research</a><a href="#insights">Insight to design</a><a href="#decisions">Decisions</a><a href="#designed">What I designed</a><a href="#outcome">Outcome</a>
+    </nav>
   </header>
 
-  <div class="band meta">
-    <div><span class="mono">Role</span><b>Product Designer, end to end</b></div>
-    <div><span class="mono">Company</span><b>ATM Mobilis</b></div>
-    <div><span class="mono">Year</span><b>2025</b></div>
-    <div><span class="mono">Surfaces</span><b>Mobile app, admin dashboard</b></div>
-    <div><span class="mono">Tools</span><b>Figma, FigJam</b></div>
-    <div><span class="mono">Research</span><b>4 user groups</b></div>
+  <div class="band cover-band"><img src="cover-mobiride.jpg" alt="MobiRide mission card with a Start ride button, next to the stats 4 user groups and 7 pain points"></div>
+
+<div class="band bento">
+    <div class="bento-intro">
+      <p>Finding an available driver, following a ride's status and flagging a delay all depended on phone calls. I started by interviewing every group involved.</p>
+    </div>
+    <div class="tile"><span class="mono">Role</span><b>Product Designer</b></div>
+    <div class="tile"><span class="mono">Company</span><b>ATM Mobilis</b></div>
+    <div class="tile"><span class="mono">Year</span><b>2025</b></div>
+    <div class="tile"><span class="mono">Delivered</span><b>Research, app, dashboard, UI kit</b></div>
   </div>
 
   <div class="band cs-layout">
     <aside class="toc">
       <nav aria-label="Case study sections">
         <div class="big-n mono" id="tocNum">01</div>
-        <div class="cur" id="tocCur">Overview</div>
+        <div class="cur" id="tocCur">The problem</div>
         <ol>
-          <li><a href="#overview">01 Overview</a></li>
-          <li><a href="#problem">02 The problem</a></li>
-          <li><a href="#research">03 Research</a></li>
-          <li><a href="#insights">04 Insight to design</a></li>
-          <li><a href="#decisions">05 Key decisions</a></li>
-          <li><a href="#designed">06 What I designed</a></li>
-          <li><a href="#outcome">07 Outcome</a></li>
+          <li><a href="#problem">01 The problem</a></li>
+          <li><a href="#research">02 Research</a></li>
+          <li><a href="#insights">03 Insight to design</a></li>
+          <li><a href="#decisions">04 Key decisions</a></li>
+          <li><a href="#designed">05 What I designed</a></li>
+          <li><a href="#outcome">06 Outcome</a></li>
         </ol>
       </nav>
     </aside>
 
     <div class="content">
-      <section class="chapter" id="overview" data-track="" data-n="01" data-title="Overview">
-        <span class="label mono">01 · Overview</span>
-        <h2>The short version</h2>
-        <div class="tldr" style="border: 1px solid var(--line); border-radius: 18px; overflow: hidden;">
-          <div><span class="mono">Problem</span><p>Finding an available driver, following a ride's status and flagging a delay all depended on calls and guesswork.</p></div>
-          <div><span class="mono">What I did</span><p>Interviews with four user groups, personas and journey maps, then mobile apps, an admin dashboard and a component library.</p></div>
-          <div><span class="mono">Outcome</span><p>A full package from research to hand-off: personas, journey maps, mobile apps, an admin dashboard and a component library.</p></div>
+      <section class="chapter" id="problem" data-track="" data-n="01" data-title="The problem">
+        <span class="label mono">01 · The problem</span>
+        <h2>Rides ran on phone calls</h2>
+        <div class="prose">
+          <p>MobiRide is the platform for Mobilis's transport department, the team that manages company vehicles and drivers. Employees request rides to work sites, managers confirm missions, admins assign drivers and drivers carry out the rides.</p>
+          <p>The existing process made it hard to find available drivers, to follow a ride's status, and to communicate when something went wrong. Four groups of people depended on the same missions, and none of them had the full picture.</p>
         </div>
         <div class="figure">
           <div class="cap mono"><b>Fig. 01</b><span>Interactive: tap through a mission from the driver's side to the employee's</span><button type="button" class="replay" data-replay="ride" style="margin-left: auto;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg>Restart</button></div>
@@ -90,17 +94,8 @@
         </div>
       </section>
 
-      <section class="chapter" id="problem" data-track="" data-n="02" data-title="The problem">
-        <span class="label mono">02 · The problem</span>
-        <h2>Rides ran on phone calls</h2>
-        <div class="prose">
-          <p>MobiRide is the platform for Mobilis's transport department, the team that manages company vehicles and drivers. Employees request rides to work sites, managers confirm missions, admins assign drivers and drivers carry out the rides.</p>
-          <p>The existing process made it hard to find available drivers, to follow a ride's status, and to communicate when something went wrong. Four groups of people depended on the same missions, and none of them had the full picture.</p>
-        </div>
-      </section>
-
-      <section class="chapter" id="research" data-track="" data-n="03" data-title="Research">
-        <span class="label mono">03 · Research</span>
+      <section class="chapter" id="research" data-track="" data-n="02" data-title="Research">
+        <span class="label mono">02 · Research</span>
         <h2>Four groups, four views</h2>
         <div class="prose"><p>I interviewed each group about how they work today, what slows them down, and what would make their day easier.</p></div>
         <div class="constraints" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 24px;">
@@ -111,8 +106,8 @@
         </div>
       </section>
 
-      <section class="chapter" id="insights" data-track="" data-n="04" data-title="Insight to design">
-        <span class="label mono">04 · From insight to design</span>
+      <section class="chapter" id="insights" data-track="" data-n="03" data-title="Insight to design">
+        <span class="label mono">03 · From insight to design</span>
         <h2>Every pain point became a decision</h2>
         <div class="table-wrap">
           <table>
@@ -130,8 +125,8 @@
         </div>
       </section>
 
-      <section class="chapter" id="decisions" data-track="" data-n="05" data-title="Key decisions">
-        <span class="label mono">05 · Key decisions</span>
+      <section class="chapter" id="decisions" data-track="" data-n="04" data-title="Key decisions">
+        <span class="label mono">04 · Key decisions</span>
         <h2>Two calls worth explaining</h2>
 
         <article class="decision-card">
@@ -161,8 +156,8 @@
         </article>
       </section>
 
-      <section class="chapter" id="designed" data-track="" data-n="06" data-title="What I designed">
-        <span class="label mono">06 · What I designed</span>
+      <section class="chapter" id="designed" data-track="" data-n="05" data-title="What I designed">
+        <span class="label mono">05 · What I designed</span>
         <h2>Two surfaces, one system</h2>
         <div class="figs-2">
           <div class="card"><span class="mono" style="color: var(--accent-text);">Mobile</span><h4>Employees and drivers</h4><p class="muted">Request, confirm and track rides. Accept, start and complete missions. Rate the ride afterwards.</p></div>
@@ -170,8 +165,8 @@
         </div>
       </section>
 
-      <section class="chapter" id="outcome" data-track="" data-n="07" data-title="Outcome">
-        <span class="label mono">07 · Outcome</span>
+      <section class="chapter" id="outcome" data-track="" data-n="06" data-title="Outcome">
+        <span class="label mono">06 · Outcome</span>
         <h2>What changed</h2>
         <div class="outcomes">
           <div class="outcome"><span class="mono muted">Research</span><b>4 groups</b><p>Interviewed, each with its own persona and journey map.</p></div>
@@ -184,12 +179,12 @@
 
   <section class="band next">
     <div class="inner">
-      <a class="big" href="cresora.html"><span class="mono">Next case study · 01</span><h2>Cresora: regulated payments as a guided path →</h2></a>
+      <a class="big" href="efc.html"><span class="mono">Next case study</span><h2>EFC. A cleaner corner for fight fans. →</h2></a>
       <div class="row mono"><a href="work.html">← Back to all work</a><span>imanefh28@gmail.com</span></div>
     </div>
   </section>
 </main>
 
-<script src="main.js?v=7"></script>
+<script src="main.js?v=15"></script>
 </body>
 </html>

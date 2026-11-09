@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
 
@@ -25,59 +25,46 @@
 <main class="frame">
   <header class="cs-hero">
     <a class="back" href="work.html">← All work</a>
-    <div class="kicker mono"><span class="chip ok">Live</span><span>Case study 01 · Payments · Healthcare · 0→1</span></div>
-    <h1>Cresora: making regulated payments feel like a guided path</h1>
-    <p class="thesis">I designed the complete MVP of Cresora Commerce, a US payments platform for healthcare: every page, for every user, on the partner portal and on the internal admin portal.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://cresoracommerce.com/Home">Visit cresoracommerce.com ↗</a>
-    </div>
+    <div class="kicker mono"><span class="tagpill">Case study</span><span class="chip ok pulse">Live · launched April 2026</span><span>Payments · Healthcare · 0→1</span></div>
+    <h1>Cresora. <span class="h1-sub">A guided path to the first payment.</span></h1>
+    <p class="thesis">I designed the complete MVP of Cresora Commerce, a US payments platform for healthcare: every page, for every user, on the partner portal and the internal admin portal.</p>
+    <nav class="chapters" aria-label="Jump to a chapter">
+      <a href="#problem">Problem</a><a href="#constraints">Constraints</a><a href="#users">Users</a><a href="#decisions">Decisions</a><a href="#states">Every state</a><a href="#outcome">Outcome</a>
+    </nav>
   </header>
 
   <div class="band cover-band"><img src="cover-cresora.jpg" alt="Cresora Commerce landing page in a browser window"></div>
 
-  <div class="band meta">
-    <div><span class="mono">Role</span><b>Product Designer, end to end</b></div>
-    <div><span class="mono">Client</span><b>Cresora Commerce, USA</b></div>
-    <div><span class="mono">Year</span><b>2026</b></div>
-    <div><span class="mono">Surfaces</span><b>Partner portal, admin portal</b></div>
-    <div><span class="mono">Tools</span><b>Figma</b></div>
-    <div><span class="mono">Users</span><b>10+ roles</b></div>
+<div class="band bento">
+    <div class="bento-intro">
+      <p>Cresora is payments infrastructure for healthcare. Software partners connect it to their products so clinics can take payments. <span class="chip idle" style="margin-left:6px">Screens under NDA</span></p>
+      <a class="btn small" href="https://cresoracommerce.com/Home">Visit Cresora ↗</a>
+    </div>
+    <div class="tile"><span class="mono">Role</span><b>Product Designer</b></div>
+    <div class="tile"><span class="mono">Company</span><b>Cresora Commerce · USA</b></div>
+    <div class="tile"><span class="mono">Year</span><b>2026</b></div>
+    <div class="tile"><span class="mono">Delivered</span><b>Full MVP, 2 portals, UI kit</b></div>
   </div>
 
   <div class="band cs-layout">
     <aside class="toc">
       <nav aria-label="Case study sections">
         <div class="big-n mono" id="tocNum">01</div>
-        <div class="cur" id="tocCur">Overview</div>
+        <div class="cur" id="tocCur">The problem</div>
         <ol>
-          <li><a href="#overview">01 Overview</a></li>
-          <li><a href="#problem">02 The problem</a></li>
-          <li><a href="#constraints">03 Constraints</a></li>
-          <li><a href="#users">04 Users</a></li>
-          <li><a href="#decisions">05 Key decisions</a></li>
-          <li><a href="#states">06 Every state</a></li>
-          <li><a href="#outcome">07 Outcome</a></li>
+          <li><a href="#problem">01 The problem</a></li>
+          <li><a href="#constraints">02 Constraints</a></li>
+          <li><a href="#users">03 Users</a></li>
+          <li><a href="#decisions">04 Key decisions</a></li>
+          <li><a href="#states">05 Every state</a></li>
+          <li><a href="#outcome">06 Outcome</a></li>
         </ol>
       </nav>
     </aside>
 
     <div class="content">
-      <section class="chapter" id="overview" data-track="" data-n="01" data-title="Overview">
-        <span class="label mono">01 · Overview</span>
-        <h2>The short version</h2>
-        <div class="tldr" style="border: 1px solid var(--line); border-radius: 18px; overflow: hidden;">
-          <div><span class="mono">Problem</span><p>Software partners had to get through onboarding, compliance, certification and review before taking a single payment, and it was easy to get lost on the way.</p></div>
-          <div><span class="mono">What I did</span><p>Designed the full MVP: a stage-aware partner portal, an internal admin portal for six review teams, and one UI kit shared by both.</p></div>
-          <div><span class="mono">Outcome</span><p>The MVP launched in April 2026, with over $4M in initial funding behind it.</p></div>
-        </div>
-        <div class="nda">
-          <span class="chip idle">Under NDA</span>
-          <p>Cresora's screens are confidential, so this case study shows my process and decisions instead. The interactive go-live gate in section 06 is a simplified recreation, not the real UI. Happy to walk through the work live in an interview.</p>
-        </div>
-      </section>
-
-      <section class="chapter" id="problem" data-track="" data-n="02" data-title="The problem">
-        <span class="label mono">02 · The problem</span>
+      <section class="chapter" id="problem" data-track="" data-n="01" data-title="The problem">
+        <span class="label mono">01 · The problem</span>
         <h2>A long, regulated road to the first payment</h2>
         <div class="prose">
           <p>Cresora is payments infrastructure for healthcare and other regulated industries. Software companies (ISV partners) connect Cresora to their products so their clients, such as dental clinics, physical therapy practices and urgent care centers, can take payments.</p>
@@ -86,8 +73,8 @@
         </div>
       </section>
 
-      <section class="chapter" id="constraints" data-track="" data-n="03" data-title="Constraints">
-        <span class="label mono">03 · Constraints</span>
+      <section class="chapter" id="constraints" data-track="" data-n="02" data-title="Constraints">
+        <span class="label mono">02 · Constraints</span>
         <h2>What shaped the design</h2>
         <div class="constraints">
           <div><span class="mono muted">Regulation</span><h4>HIPAA and PCI</h4><p>Compliance documents have real statuses and expiry dates, and every action on money or health data needs to be traceable.</p></div>
@@ -96,8 +83,8 @@
         </div>
       </section>
 
-      <section class="chapter" id="users" data-track="" data-n="04" data-title="Users">
-        <span class="label mono">04 · Users</span>
+      <section class="chapter" id="users" data-track="" data-n="03" data-title="Users">
+        <span class="label mono">03 · Users</span>
         <h2>Two sides, many jobs</h2>
         <div class="figs-2">
           <div class="card">
@@ -115,8 +102,8 @@
         </div>
       </section>
 
-      <section class="chapter" id="decisions" data-track="" data-n="05" data-title="Key decisions">
-        <span class="label mono">05 · Key decisions</span>
+      <section class="chapter" id="decisions" data-track="" data-n="04" data-title="Key decisions">
+        <span class="label mono">04 · Key decisions</span>
         <h2>Three calls that defined the product</h2>
 
         <article class="decision-card">
@@ -159,8 +146,8 @@
         </article>
       </section>
 
-      <section class="chapter" id="states" data-track="" data-n="06" data-title="Every state">
-        <span class="label mono">06 · Every state</span>
+      <section class="chapter" id="states" data-track="" data-n="05" data-title="Every state">
+        <span class="label mono">05 · Every state</span>
         <h2>Designing beyond the happy path</h2>
         <div class="prose"><p>Failures, blocks, rejections, expirations and suspensions each got a clear message and a next step. Try the gate below, then scan the states I designed.</p></div>
 
@@ -195,8 +182,8 @@
         <h3>Errors caught where they happen</h3>
       </section>
 
-      <section class="chapter" id="outcome" data-track="" data-n="07" data-title="Outcome">
-        <span class="label mono">07 · Outcome</span>
+      <section class="chapter" id="outcome" data-track="" data-n="06" data-title="Outcome">
+        <span class="label mono">06 · Outcome</span>
         <h2>What happened next</h2>
         <div class="outcomes">
           <div class="outcome"><span class="mono muted">Launch</span><b>Apr 2026</b><p>Cresora Commerce officially launched, <a href="https://natlawreview.com/press-releases/cresora-commerce-launches-over-4m-funding-redefine-ai-driven-commerce">backed by over $4M in initial funding ↗</a>.</p></div>
@@ -209,12 +196,12 @@
 
   <section class="band next">
     <div class="inner">
-      <a class="big" href="infoempresa.html"><span class="mono">Next case study · 02</span><h2>Infoempresa: built for decisions, not for data →</h2></a>
+      <a class="big" href="participation.html"><span class="mono">Next case study</span><h2>Participation Committee. Benefits without paperwork. →</h2></a>
       <div class="row mono"><a href="work.html">← Back to all work</a><span>imanefh28@gmail.com</span></div>
     </div>
   </section>
 </main>
 
-<script src="main.js?v=7"></script>
+<script src="main.js?v=15"></script>
 </body>
 </html>

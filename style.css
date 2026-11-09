@@ -729,3 +729,5 @@ tr:hover td { background: color-mix(in srgb, var(--accent) 6%, var(--sheet)); }
 .band.bento .bento-intro p { flex: 1 1 480px; }
 .band.bento .tile { min-height: 0; justify-content: flex-start; padding: 14px 18px; }
 @media (max-width: 760px) { .band.bento { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* One cover size for every case study */
+.cover-band img { aspect-ratio: 16 / 8; object-fit: cover; }

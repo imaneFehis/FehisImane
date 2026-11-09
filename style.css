@@ -90,7 +90,13 @@ button { font: inherit; color: inherit; }
   .pillnav .label { display: none; }
   .pillnav a, .pillnav button { padding: 0 11px; }
 }
-@media (max-width: 420px) { .pillnav .home .name { display: none; } }
+@media (max-width: 600px) {
+  .pillnav { gap: 2px; padding: 4px; top: 12px; }
+  .pillnav a, .pillnav button { padding: 0 10px; min-height: 40px; font-size: 14px; }
+  .pillnav .sep, .pillnav .hide-sm { display: none; }
+  .pillnav .cta { padding: 0 14px; }
+}
+body { overflow-x: clip; }
 
 /* ---------- Side progress ticks ---------- */
 .ticks { position: fixed; left: 18px; top: 50%; transform: translateY(-50%); z-index: 40; display: flex; flex-direction: column; gap: 12px; list-style: none; margin: 0; padding: 0; }

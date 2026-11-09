@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="style.css?v=15">
+<link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
 
@@ -24,7 +24,12 @@
 
 <main class="frame">
   <section class="hero2" id="top">
-    <div class="avatar-wrap"><img class="avatar" id="avatar" src="avatar.jpg" alt="Illustration of Imane" width="160" height="160"></div>
+    <div class="avatar-wrap"><img class="avatar" id="avatar" src="avatar.jpg" alt="Illustration of Imane" width="160" height="160">
+      <button type="button" class="peek" id="peek" aria-label="Say hi to Imane's elephant">
+        <svg viewBox="0 0 60 50" aria-hidden="true"><g fill="var(--violet)"><circle cx="30" cy="30" r="20"/><ellipse cx="12" cy="26" rx="10" ry="13"/><ellipse cx="48" cy="26" rx="10" ry="13"/><path class="tr" d="M26 40 Q24 50 30 50 Q36 50 34 40 Z"/></g><ellipse cx="12" cy="26" rx="6" ry="9" fill="var(--tint)"/><ellipse cx="48" cy="26" rx="6" ry="9" fill="var(--tint)"/><circle cx="23" cy="27" r="6" fill="#fff"/><circle cx="37" cy="27" r="6" fill="#fff"/><g class="eyes"><circle cx="23" cy="27.5" r="3.6" fill="#15131F"/><circle cx="37" cy="27.5" r="3.6" fill="#15131F"/><circle cx="24.4" cy="26" r="1.2" fill="#fff"/><circle cx="38.4" cy="26" r="1.2" fill="#fff"/></g><ellipse cx="17" cy="35" rx="3" ry="1.8" fill="#F29C93" opacity=".6"/><ellipse cx="43" cy="35" rx="3" ry="1.8" fill="#F29C93" opacity=".6"/></svg>
+      </button>
+      <span class="peek-tip" id="peekTip" role="status"></span>
+    </div>
     <span class="roles" aria-label="Product designer"><span class="roles-track" aria-hidden="true"><span>Product Designer</span><span>UX Researcher</span><span>Design Systems Builder</span><span>B2B &amp; Payments Designer</span><span>Product Designer</span></span></span>
     <h1>Hi, I'm Imane.<br><span class="h1-sub">I make complex products feel simple.</span></h1>
     <p class="lede">Product designer for payments, telecom and B2B platforms | From messy requirements to clear, shipped screens, for teams in Spain, Canada, France, the US and Algeria.</p>
@@ -155,6 +160,14 @@
   </div>
 </footer>
 
-<script src="main.js?v=15"></script>
+
+<div class="ele-buddy" id="eleBuddy" aria-hidden="true">
+  <div class="ele-tip" id="eleTip"></div>
+  <button type="button" class="ele-body" id="eleBody" tabindex="-1" aria-label="Elephant">
+    <svg viewBox="0 0 64 48"><g fill="var(--violet)"><ellipse cx="36" cy="24" rx="20" ry="14"/><circle cx="18" cy="18" r="11"/><rect class="lg" x="24" y="32" width="6" height="12" rx="3"/><rect class="lg lg2" x="44" y="32" width="6" height="12" rx="3"/><path class="tr" d="M10 20 Q4 30 8 40 Q10 43 12 40 Q9 31 14 24 Z"/><path d="M55 20 q6 2 4 8" stroke="var(--violet)" stroke-width="2" fill="none"/></g><ellipse cx="24" cy="15" rx="7" ry="9" fill="var(--tint)"/><circle cx="14" cy="15" r="1.8" fill="var(--ink)"/></svg>
+  </button>
+</div>
+
+<script src="main.js?v=17"></script>
 </body>
 </html>

@@ -273,3 +273,21 @@
   document.getElementById('pzShuffle').addEventListener('click', shuffle);
   shuffle();
 })();
+
+/* ---------- Elephant peeking from the avatar ---------- */
+(function () {
+  var btn = document.getElementById('peek'); if (!btn) return;
+  var wrap = btn.parentNode, tip = document.getElementById('peekTip'), eyes = btn.querySelector('.eyes'), i = 0, t;
+  var facts = ["Hi! I'm Imane's elephant.", "Elephants are Imane's favorite animal.", "She just finished a 147-piece elephant puzzle.", "She reads on every flight.", "She designs in English, French and Arabic.", "Psst: the puzzle in About is solvable."];
+  btn.addEventListener('click', function () {
+    tip.textContent = facts[i++ % facts.length];
+    wrap.classList.add('hi'); clearTimeout(t);
+    t = setTimeout(function () { wrap.classList.remove('hi'); }, 2600);
+  });
+  if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+    window.addEventListener('mousemove', function (e) {
+      var r = btn.getBoundingClientRect(), dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2), d = Math.hypot(dx, dy) || 1;
+      eyes.style.transform = 'translate(' + (dx / d * 2).toFixed(2) + 'px,' + (dy / d * 2).toFixed(2) + 'px)';
+    });
+  }
+})();

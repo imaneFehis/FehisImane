@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Infoempresa Case Study · Imane Fehis</title>
-<meta name="description" content="How Imane Fehis redesigned Infoempresa, a Spanish business-information platform, around decisions instead of data.">
+<meta name="description" content="How Imane Fehis redesigned Infoempresa, a Spanish business-information platform, around decisions instead of data, and designed its AI chatbot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
@@ -25,11 +25,11 @@
 <main class="frame">
   <header class="cs-hero">
     <a class="back" href="work.html">← All work</a>
-    <div class="kicker mono"><span class="tagpill">Case study</span><span class="chip ok pulse">Live on infoempresa.com</span><span>Data platform · E-commerce · Redesign</span></div>
+    <div class="kicker mono"><span class="tagpill">Case study</span><span class="chip ok pulse">Live on infoempresa.com</span><span>Data platform · E-commerce · Redesign · AI chatbot</span></div>
     <h1>Infoempresa. <span class="h1-sub">Built for decisions, not for data.</span></h1>
-    <p class="thesis">A research-led redesign of a Spanish business-information platform, so that anyone, not only experts, can check a company and buy a report with confidence.</p>
+    <p class="thesis">A research-led redesign of a Spanish business-information platform, so that anyone, not only experts, can check a company and buy a report with confidence, now with an AI chatbot that answers questions in plain language.</p>
     <nav class="chapters" aria-label="Jump to a chapter">
-      <a href="#problem">Problem</a><a href="#audit">Audit</a><a href="#principles">Principles</a><a href="#ia">Structure</a><a href="#screens">Screens</a><a href="#checkout">Checkout</a><a href="#outcome">Outcome</a>
+      <a href="#problem">Problem</a><a href="#audit">Audit</a><a href="#principles">Principles</a><a href="#ia">Structure</a><a href="#screens">Screens</a><a href="#checkout">Checkout</a><a href="#chatbot">AI chatbot</a><a href="#outcome">Outcome</a>
     </nav>
   </header>
 
@@ -43,7 +43,7 @@
     <div class="tile"><span class="mono">Role</span><b>Product Designer</b></div>
     <div class="tile"><span class="mono">Company</span><b>DCB Software · Telecoming</b></div>
     <div class="tile"><span class="mono">Year</span><b>2026</b></div>
-    <div class="tile"><span class="mono">Delivered</span><b>Research, IA, UI kit, flows</b></div>
+    <div class="tile"><span class="mono">Delivered</span><b>Research, IA, UI kit, flows, AI chatbot</b></div>
   </div>
 
   <div class="band cs-layout">
@@ -58,7 +58,8 @@
           <li><a href="#ia">04 Structure</a></li>
           <li><a href="#screens">05 Screens</a></li>
           <li><a href="#checkout">06 Checkout</a></li>
-          <li><a href="#outcome">07 Outcome</a></li>
+          <li><a href="#chatbot">07 AI chatbot</a></li>
+          <li><a href="#outcome">08 Outcome</a></li>
         </ol>
       </nav>
     </aside>
@@ -207,8 +208,29 @@
         </div>
       </section>
 
-      <section class="chapter" id="outcome" data-track="" data-n="07" data-title="Outcome">
-        <span class="label mono">07 · Outcome</span>
+      <section class="chapter" id="chatbot" data-track="" data-n="07" data-title="AI chatbot">
+        <span class="label mono">07 · AI chatbot</span>
+        <h2>Ask a question, get a clear answer</h2>
+        <div class="prose">
+          <p>The redesign made the answers easy to find. The chatbot goes one step further: people can ask their question in their own words, like "Is this company still active?" or "Who are the directors?", and get a short, plain-language answer drawn from Infoempresa's data.</p>
+          <p>I designed the chatbot experience and how it should behave: what it answers, how it shows where an answer comes from, and what it does when it isn't sure.</p>
+        </div>
+        <div class="highlights">
+          <div><span class="hl-k">A</span><p><b>Built on the four questions.</b> The chatbot was scoped around the questions users already came with: does it exist, who is responsible, is there a risk, has something changed.</p></div>
+          <div><span class="hl-k">B</span><p><b>Plain words, real sources.</b> Answers avoid registry jargon and point to the data they come from, so people can trust them.</p></div>
+          <div><span class="hl-k">C</span><p><b>A clear next step.</b> When a question needs a full report, the chatbot leads to the right report and its price instead of guessing.</p></div>
+          <div><span class="hl-k">D</span><p><b>Honest when unsure.</b> If the data isn't there or the question is out of scope, it says so and offers another path.</p></div>
+        </div>
+        <h3>Every answer has a state</h3>
+        <div class="states">
+          <div class="state"><span class="chip ok">Answered</span><p>A short answer with its data source.</p></div>
+          <div class="state"><span class="chip review">Needs a report</span><p>Explains what the full report adds, with its price.</p></div>
+          <div class="state"><span class="chip warn">Not sure</span><p>Says it can't confirm and suggests where to check.</p></div>
+          <div class="state"><span class="chip block">Out of scope</span><p>Politely declines and points back to company data.</p></div>
+        </div>
+      </section>
+      <section class="chapter" id="outcome" data-track="" data-n="08" data-title="Outcome">
+        <span class="label mono">08 · Outcome</span>
         <h2>How the product changed</h2>
         <div class="shift">
           <div><span class="mono">Data</span><i aria-hidden="true">→</i><b>Decisions</b><p>Pages lead with the answer: is this company active, and what does it cost to know more.</p></div>
@@ -232,7 +254,7 @@
   <section class="band next">
     <div class="inner">
       <a class="big" href="cresora.html"><span class="mono">Next case study</span><h2>Cresora. A guided path to the first payment. →</h2></a>
-      <div class="row mono"><a href="work.html">← Back to all work</a><span>imanefh28@gmail.com</span></div>
+      <div class="row mono"><a href="work.html">← Back to all work</a><span>fehis.iman@gmail.com</span></div>
     </div>
   </section>
 </main>
